@@ -1,8 +1,9 @@
+import cv2
 import operator
 import numpy as np
 from imageio import imread
 from skimage.transform import resize
-
+from PIL import Image                                                                                
 
 def load_and_align_images(filepaths, margin,image_size):
     
@@ -14,6 +15,11 @@ def load_and_align_images(filepaths, margin,image_size):
             
     return np.array(aligned_images)
 
+def read_image(image_path):
+    return Image.open(image_path)
+
+def read_image_to_arr(image_path):
+    return np.array(Image.open(image_path))
 
 def prewhiten(x):
     if x.ndim == 4:

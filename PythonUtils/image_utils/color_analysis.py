@@ -3,7 +3,7 @@ from collections import defaultdict
 from cv2 import imread, cvtColor, COLOR_BGR2GRAY, imshow
 from numpy import zeros_like, ravel, sort, multiply, divide, int8
 
-def color_analysis(img):
+def color_analysis(image_path):
     # obtain the color palatte of the image 
     palatte = defaultdict(int)
     for pixel in img.getdata():
