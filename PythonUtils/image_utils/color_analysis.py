@@ -67,3 +67,5 @@ def median_filter(gray_img, mask=3):
             median = sort(kernel)[int8(divide((multiply(mask, mask)), 2) + 1)]
             median_img[i, j] = median
     return median_img
+    
+    
